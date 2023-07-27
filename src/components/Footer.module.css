@@ -1,24 +1,33 @@
 .footerParent {  
-  height: 72px;
+  min-height: 72px;
   background: #201B21;
   color: #D9DBE1;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+
+.footerLogo {
+  grid-column: 1;
+  place-self: center;
 }
 
 .footerText {
-  /* border: 1px solid orange; */
+  grid-column: 2;
+  grid-row: 1;
+  place-self: center;
+
   font-size: 0.9rem;
-  font-feature-settings: 'liga' off;
-  /* font-style: normal; */
   font-weight: 300;
   opacity: 0.7;
 }
 
 .footerIcons {
-  /* border: 1px solid red; */
+  grid-column: 3;
+  place-self: center;
+
   display: flex;
   flex-direction: row;
   gap: 1rem;
@@ -26,4 +35,30 @@
 
 .footerIcons img:hover {
   cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .footerParent {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+
+    padding: 0.5rem 0 0 0.8rem;
+  }
+
+  .footerLogo {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+  }
+
+  .footerText {
+    grid-column: 1;
+    grid-row: 2;
+    font-size: 0.85rem;
+  }
+
+  .footerIcons {
+    grid-column: 2;
+    grid-row: 1;
+  }
 }
