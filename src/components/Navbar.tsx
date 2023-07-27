@@ -7,11 +7,11 @@ const Navbar = () => {
       <Link to='/' className={styles.logo}>
         <img src='../../public/images/logo-black.svg'/>
       </Link>
-      <Link to='/view-cart' className={styles['cart-parent']}>
-        <div className={styles['cart-button']}>
+      <Link to='/view-cart' className={styles.cartParent}>
+        <div className={styles.cartButton}>
           <img src='../../public/images/bag-icon.svg' />
-          <p className={styles['cart-text']}>View Cart</p>
-          <div className={styles['cart-quantity']}></div>
+          <p>View Cart</p>
+          <div></div>
         </div>        
       </Link>
     </nav>

@@ -14,14 +14,14 @@
   margin-left: 15rem;
 }
 
-.cart-parent {
+.cartParent {
   margin-right: 15rem;
   text-decoration: none;
   font-weight: 700;
   color: #201B21;
 }
 
-.cart-button {
+.cartButton {
   text-decoration: none;
   background: #fff;  
   border-radius: 8px;
@@ -34,12 +34,4 @@
   justify-content: center;
   align-items: center;
   gap: 5px;
-}
-
-.cart-text {
-  /* add as needed */
-}
-
-.cart-quantity {
-  /* add as needed */
 }
