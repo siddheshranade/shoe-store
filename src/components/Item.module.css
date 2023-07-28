@@ -1,0 +1,61 @@
+.parent {
+  width: 260px;
+  height: 350px;
+  margin: 1rem;
+  min-width: 0; /* prevents going outside container */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+
+.image {
+  width: 260px;
+  height: 250px;
+  margin-bottom: 0.6rem;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 0 0 -0.9rem 0;
+}
+
+.name {
+  color: #67696E;
+  line-height: 20px;
+  margin-bottom: -0.9rem;
+}
+
+.price {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+@media (max-width: 1000px) {
+  .parent {
+    width: 130px;
+    height: 175px;
+  }
+
+  .brand {
+    font-size: 16px;
+    margin: -0.5rem 0 -0.4rem 0;
+  }
+
+  .name {
+    font-size: 9px;
+    line-height: 10px;
+  }
+
+  .price {
+    font-size: 9px;
+  }
+
+  .image {
+    width: 130px;
+    height: 125px;
+  }
+}
