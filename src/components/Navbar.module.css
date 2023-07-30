@@ -37,3 +37,16 @@
   align-items: center;
   gap: 5px;
 }
+
+.cartQuant {
+  background-color: #EC5E2A;
+  color: white;
+  font-size: 10px;
+  border-radius: 50%;
+  height: 16px;
+  width: 16px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

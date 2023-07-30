@@ -7,6 +7,7 @@ const Home = () => {
   const ItemsList = storeItems.map((eachItem) => (
     <Link
       to={`/product/${eachItem.id}`}
+      state={{product: eachItem}}
       key={eachItem.id}
       className={styles.productLink}
     >
