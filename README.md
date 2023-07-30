@@ -21,6 +21,7 @@ Due to time constraints I haven't yet implemented some improvements this project
 5. Visually, I've stuck exactly to the prototypes shown in the Figma file without changing anything for now.
 6. I haven't used any database, but have hardcoded data in a JSON file for now.
 7. I haven't added any automated tests to check the business logic implementation yet.
+8. Taxes, shipping, and discount values are hardcoded.
 
 ## Concurrency Improvements
 
