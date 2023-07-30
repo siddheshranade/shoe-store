@@ -17,6 +17,8 @@ const ViewCart = () => {
     const itemPrice = defaultStoreItems.find(item => item.id === currentItem.id)?.price || 0;
     return total + (currentItem.quantity * itemPrice);
   }, 0);
+  
+  subTotal = parseFloat(subTotal.toFixed(2));
 
   const quantityChangeHandler = (itemId: number, e: any) => {
     let newQuantity = e.target.value;
@@ -29,8 +31,9 @@ const ViewCart = () => {
   }
   
   let bagItems = cartItemsToDisplay.map(item => {
-    const quantity = 
+    let quantity = 
       currentCartItems.find(each => each.id === item.id)?.quantity;
+      quantity = quantity ? quantity : 1;
 
     return (
       <div className={styles.bagContainer}>
@@ -41,7 +44,7 @@ const ViewCart = () => {
           <div className={styles.bagDetailsText}>
             <div className={styles.bagDetailsTextLineOne}>
               <p>{item.brandName}</p>
-              <p>${item.price}</p>              
+              <p>${(item.price * quantity).toFixed(2)}</p>              
             </div>
             <p className={styles.bagDetailsTextLineTwo}>{item.shoeName}</p>
           </div>
