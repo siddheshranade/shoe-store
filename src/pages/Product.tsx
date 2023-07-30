@@ -3,28 +3,21 @@ import { useRef } from 'react';
 import styles from "./Product.module.css";
 import { useCart } from '../context/CartContext';
 
-
 const desc = `Energize your look with a fresh take on heritage adidas style. The adidas Daily 
   3.0 Shoes cut a classic profile with a modern suede upper. Your walk across campus or commute 
   across town has never looked or felt this good.`;
 
 const Product = () => {
-  const { addToCart, cartItems } = useCart();
+  const { addToCart } = useCart();
   const {id, brandName, shoeName, price} = useLocation().state.product;
   const imageUrl = `../../public/images/`;
   const inputQuantRef = useRef<HTMLInputElement>(null);
 
   const submitHandler = (event: { preventDefault: () => void; }) => {
-    console.log(event);
     event.preventDefault();
     let quantity = parseInt(inputQuantRef.current ? inputQuantRef.current.value : '0');
     
     addToCart(id, quantity);
-    setTimeout(() => {
-      console.log('quant: ', quantity);
-      console.log('cartItems: ', cartItems.length, cartItems);
-    }, 3000)
-
   };
   
   return (

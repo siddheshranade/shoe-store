@@ -8,7 +8,7 @@ type CartItemType = {
 type CartContextType = {
   cartItems: CartItemType[];
   addToCart: (itemId: number, quantity: number) => void;
-  removeFromCart: (itemId: number, quantity: number) => void;
+  modifyCart: (itemId: number, quantity: number) => void;
 };
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
@@ -35,17 +35,17 @@ export function CartProvider({ children }: CartProviderProps) {
     });
   };
 
-  const removeFromCart = (id: number, quantity: number) => {
+  const modifyCart = (id: number, newQuantity: number) => {
     setCartItems((prevItems) => {
       const existingItem = prevItems.find((item) => item.id === id);
 
       if (existingItem) {
-        if (existingItem.quantity - quantity <= 0) {
+        if (newQuantity <= 0) {
           return prevItems.filter((item) => item.id !== id);
         }
 
-        return prevItems.map((item) =>
-          item.id === id ? { ...item, quantity: item.quantity - quantity } : item
+        return prevItems.map(item =>
+          item.id === id ? { ...item, quantity: newQuantity } : item
         );
       } else {
         return prevItems;
@@ -53,7 +53,7 @@ export function CartProvider({ children }: CartProviderProps) {
     });
   };
 
-  const value = { cartItems, addToCart, removeFromCart };
+  const value = { cartItems, addToCart, modifyCart };
 
   return (
     <CartContext.Provider value={value}>
