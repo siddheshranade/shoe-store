@@ -14,7 +14,12 @@ The website is responsive and has some simple cart functionality.
 
 ## Screenshots
 
+#### Home page
 ![Home page](/public/screenshots/ss-1.png)
+
+#### Product page
 ![Product page](/public/screenshots/ss-2.png)
+
+#### Cart page
 ![Cart page](/public/screenshots/ss-3.png)
 
