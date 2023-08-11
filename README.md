@@ -11,3 +11,10 @@ The website is responsive and has some simple cart functionality.
 3. run `npm install`
 4. run `npm run dev`
 5. Access the localhost URL that appears in the terminal
+
+## Screenshots
+
+![Home page](/public/screenshots/ss-1.png")
+![Product page](/public/screenshots/ss-2.png")
+![Cart page](/public/screenshots/ss-3.png")
+
