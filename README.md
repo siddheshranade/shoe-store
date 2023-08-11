@@ -1,6 +1,6 @@
 # E-Commerce Shoe Store
 
-Welcome to the e-commerce store I've built as part of the frontend technical assessment! 
+This is an e-commerce store I've built with very simple cart functionality.
 
 ## How to Deploy
 
